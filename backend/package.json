@@ -1,0 +1,42 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "dev": "DOT_ENV=true nodemon -r esm src/app.js",
+    "start-local": "DOT_ENV=true node -r esm src/app.js",
+    "start": "node -r esm src/app.js",
+    "lint": "eslint --fix .",
+    "test": "jest --verbose --silent",
+    "test-writing": "jest --coverage=false --watch"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.2.5",
+    "argon2": "^0.27.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "joi": "^17.2.1",
+    "json-spec": "file:src/lib/json-spec",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.10",
+    "request-promise": "^4.2.5",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "jest": "^25.4.0",
+    "nodemon": "^2.0.3"
+  }
+}
